@@ -19,6 +19,7 @@ local mappings = {
         -- ["<leader>dd"] = { "<cmd> DiffviewFileHistory %<cr>", desc = "diff current file" },
         -- ["<leader>dv"] = { ":call v:lua.compare_to_clipboard()<CR>", desc = "Diff selected with clipboard" },
         ["<leader>j"] = { ":HopWord<cr>", desc = "Hop jump word" },
+        ["T"] = { ":ToggleTerm<cr>", desc = "Toggle terminal" },
 
 
         ["fm"] = { "<cmd>lua vim.lsp.buf.format { async = true } <cr>", desc = "Format" },
