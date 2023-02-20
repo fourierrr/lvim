@@ -43,7 +43,16 @@ local plugins = {
   },
   {
     "simrat39/symbols-outline.nvim",
-  }
+  },
+  {
+    "ray-x/lsp_signature.nvim",
+    event = "BufRead",
+  },
+  {
+    "kkharji/lspsaga.nvim",
+    dependencies = { { "nvim-tree/nvim-web-devicons" } }
+  },
+
 }
 
 

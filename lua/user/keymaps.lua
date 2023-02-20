@@ -21,6 +21,8 @@ local mappings = {
         ["<leader>j"] = { ":HopWord<cr>", desc = "Hop jump word" },
         ["T"] = { ":ToggleTerm<cr>", desc = "Toggle terminal" },
         ["tt"] = { ":SymbolsOutline<cr>", desc = "Toggle SymbolsOutline" },
+        ["<leader>a"] = { ":Lspsaga code_action<cr>", desc = "Lspsaga code_action" },
+        ["<leader>rn"] = { ":Lspsaga rename<cr>", desc = "Lspsaga rename" },
 
 
         ["fm"] = { "<cmd>lua vim.lsp.buf.format { async = true } <cr>", desc = "Format" },
