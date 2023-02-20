@@ -20,6 +20,7 @@ local mappings = {
         -- ["<leader>dv"] = { ":call v:lua.compare_to_clipboard()<CR>", desc = "Diff selected with clipboard" },
         ["<leader>j"] = { ":HopWord<cr>", desc = "Hop jump word" },
         ["T"] = { ":ToggleTerm<cr>", desc = "Toggle terminal" },
+        ["tt"] = { ":SymbolsOutline<cr>", desc = "Toggle SymbolsOutline" },
 
 
         ["fm"] = { "<cmd>lua vim.lsp.buf.format { async = true } <cr>", desc = "Format" },
