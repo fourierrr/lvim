@@ -20,6 +20,8 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.lualine.style = "default"
 lvim.builtin["terminal"].shell = "zsh"
+lvim.builtin.gitsigns.opts.current_line_blame=true
+lvim.builtin.gitsigns.opts.current_line_blame_opts.delay=300
 
 -- aoto select first cmp options
 lvim.builtin.cmp.confirm_opts.select = true
