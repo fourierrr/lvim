@@ -91,7 +91,7 @@ end
 
 local function telescopeMappings()
   lvim.keys.normal_mode["<leader>o"] = { "<cmd>Telescope oldfiles<cr>" }
-  lvim.keys.normal_mode["<leader>f"] = { "<cmd> Telescope find_files <CR>" }
+  lvim.keys.normal_mode["<leader>f"] = { "<cmd>Telescope find_files <CR>" }
   lvim.keys.normal_mode["<leader>g"] = { "<cmd>Telescope live_grep<cr>" }
 end
 
@@ -107,6 +107,12 @@ local function lspMappings()
   lvim.lsp.buffer_mappings.normal_mode['gh'] = lvim.lsp.buffer_mappings.normal_mode['K']
 end
 
+local function whichkey()
+  -- default <leader>f is choose find_files or git_files
+  -- i do not want git_files, it's will always be find_files
+  lvim.builtin.which_key.mappings["f"] = {}
+end
+
 function Setup()
   -- unmapLvimDefault()
   -- bufferLineKeybindings()
@@ -115,6 +121,7 @@ function Setup()
   -- tab()
   telescopeMappings()
   lspMappings()
+  whichkey()
   -- lspsaga()
   -- git()
   -- window()
