@@ -24,7 +24,7 @@ local headers = {
 
 local plugins = ""
 if vim.fn.has "linux" == 1 or vim.fn.has "mac" == 1 then
-  local handle = io.popen('ls  $HOME"/.local/share/lunarvim/site/pack/Lazy/opt/" | wc -l ')
+  local handle = io.popen('ls  $HOME"/.local/share/lunarvim/site/pack/lazy/opt/" | wc -l ')
   plugins = handle:read("*a")
   handle:close()
 
