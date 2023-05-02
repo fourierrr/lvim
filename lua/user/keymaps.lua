@@ -92,7 +92,8 @@ end
 local function telescopeMappings()
   lvim.keys.normal_mode["<leader>o"] = { "<cmd>Telescope oldfiles<cr>" }
   lvim.keys.normal_mode["<leader>f"] = { "<cmd>Telescope find_files <CR>" }
-  lvim.keys.normal_mode["<leader>g"] = { "<cmd>Telescope live_grep<cr>" }
+  -- lvim.keys.normal_mode["<leader>g"] = { "<cmd>Telescope live_grep<cr>" }
+  lvim.keys.normal_mode["<leader>t"] = { "<cmd>Telescope live_grep<cr>" }
 end
 
 local function lspMappings()
