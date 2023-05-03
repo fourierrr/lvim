@@ -57,6 +57,8 @@ local function on_attach(bufnr)
 end
 lvim.builtin.nvimtree.setup.on_attach = on_attach
 
+vim.g.copilot_no_tab_map = true
+vim.g.copilot_assume_mapped = true
 
 -- aoto select first cmp options
 lvim.builtin.cmp.confirm_opts.select = true

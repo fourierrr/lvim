@@ -11,6 +11,17 @@ local plugins = {
   {
     "Pocco81/auto-save.nvim",
   },
+  -- {
+  --   "github/copilot.vim",
+  -- },
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({})
+    end,
+  },
   {
     "ethanholz/nvim-lastplace",
   },

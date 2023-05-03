@@ -8,80 +8,87 @@
 
 lvim.leader = "space"
 local mappings = {
-    -- first key is the mode
-    n = {
-        -- second key is the lefthand side of the map
-        -- mappings seen under group name "Buffer"
-        -- ["<M-w>"] = { function() closeWindowOrBuffer() end, desc = "Close current window/split" },
-        -- ["<M-q>"] = { "<cmd>qa!<CR>", desc = "quit nvim" },
+  -- first key is the mode
+  n = {
+    -- second key is the lefthand side of the map
+    -- mappings seen under group name "Buffer"
+    -- ["<M-w>"] = { function() closeWindowOrBuffer() end, desc = "Close current window/split" },
+    -- ["<M-q>"] = { "<cmd>qa!<CR>", desc = "quit nvim" },
 
-        -- ["<leader>df"] = { "<cmd> DiffviewOpen <cr>", desc = "Open diffview" },
-        -- ["<leader>dd"] = { "<cmd> DiffviewFileHistory %<cr>", desc = "diff current file" },
-        -- ["<leader>dv"] = { ":call v:lua.compare_to_clipboard()<CR>", desc = "Diff selected with clipboard" },
-        ["<leader>j"] = { ":HopWord<cr>", desc = "Hop jump word" },
-        ["T"] = { ":ToggleTerm<cr>", desc = "Toggle terminal" },
-        ["tt"] = { ":SymbolsOutline<cr>", desc = "Toggle SymbolsOutline" },
-        ["<leader>a"] = { ":Lspsaga code_action<cr>", desc = "Lspsaga code_action" },
-        ["<leader>rn"] = { ":Lspsaga rename<cr>", desc = "Lspsaga rename" },
-
-
-        ["fm"] = { "<cmd>lua vim.lsp.buf.format { async = true } <cr>", desc = "Format" },
-        -- ["<M-m>"] = { "<cmd>lua vim.lsp.buf.format { async = true } <cr>", desc = "Format" },
-
-        -- ["<leader>gr"] = { function() require("gitsigns").reset_hunk() end, desc = "Reset git hunk" },
-
-        -- Run
-        -- ["<leader>rr"] = { "<cmd>GoTestFile<cr>", desc = "GoTestFile" },
-        -- ["<leader>rt"] = { "<cmd>GoTest<cr>", desc = "RunAllGoTest: GoTestFile" },
-        -- ["<M-r>"] = { ":%SnipRun<CR>", desc = "Run current file" },
-
-        -- ["<leader>zo"] = { "zR", desc = "Unfold all" },
-        -- ["<leader>zc"] = { "zM", desc = "Fold all" },
+    -- ["<leader>df"] = { "<cmd> DiffviewOpen <cr>", desc = "Open diffview" },
+    -- ["<leader>dd"] = { "<cmd> DiffviewFileHistory %<cr>", desc = "diff current file" },
+    -- ["<leader>dv"] = { ":call v:lua.compare_to_clipboard()<CR>", desc = "Diff selected with clipboard" },
+    ["<leader>j"] = { ":HopWord<cr>", desc = "Hop jump word" },
+    ["T"] = { ":ToggleTerm<cr>", desc = "Toggle terminal" },
+    ["tt"] = { ":SymbolsOutline<cr>", desc = "Toggle SymbolsOutline" },
+    ["<leader>a"] = { ":Lspsaga code_action<cr>", desc = "Lspsaga code_action" },
+    ["<leader>rn"] = { ":Lspsaga rename<cr>", desc = "Lspsaga rename" },
 
 
-        -- Nohl
-        -- ["<leader>nl"] = { "<cmd> nohl <CR>", desc = "nohl" },
+    ["fm"] = { "<cmd>lua vim.lsp.buf.format { async = true } <cr>", desc = "Format" },
+    -- ["<M-m>"] = { "<cmd>lua vim.lsp.buf.format { async = true } <cr>", desc = "Format" },
 
-        -- Show
-        -- ["<leader>ss"] = { "<cmd>AerialToggle<CR>", desc = "Show outline" },
+    -- ["<leader>gr"] = { function() require("gitsigns").reset_hunk() end, desc = "Reset git hunk" },
 
-        -- ["<C-q>"] = { "<cmd>SessionManager load_session<CR>", desc = "Load session" }, -- <!>load_session
+    -- Run
+    -- ["<leader>rr"] = { "<cmd>GoTestFile<cr>", desc = "GoTestFile" },
+    -- ["<leader>rt"] = { "<cmd>GoTest<cr>", desc = "RunAllGoTest: GoTestFile" },
+    ["<M-r>"] = { ":%SnipRun<CR>", desc = "Run current file" },
 
-        -- Test KeyStroke
-        ["<C-M-m>"] = { '<cmd>lua vim.notify("heihei")<CR>' }, -- command+control+m
-        -- ["<M-m>"] = { '<cmd>lua vim.notify("<M> is CMD in Mac, achieve by wezterm")<CR>' }, -- command+m
-        -- ["<M-I>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" }, -- alt + shift + i --> tab + i --> by karabiner
+    -- ["<leader>zo"] = { "zR", desc = "Unfold all" },
+    -- ["<leader>zc"] = { "zM", desc = "Fold all" },
+    ["<leader>1"] = { ":BufferLineGoToBuffer 1<cr>", desc = "go to buffer 1" },
+    ["<leader>2"] = { ":BufferLineGoToBuffer 2<cr>", desc = "go to buffer 1" },
+    ["<leader>3"] = { ":BufferLineGoToBuffer 3<cr>", desc = "go to buffer 1" },
+    ["<leader>4"] = { ":BufferLineGoToBuffer 4<cr>", desc = "go to buffer 1" },
+    ["<leader>5"] = { ":BufferLineGoToBuffer 5<cr>", desc = "go to buffer 1" },
+    ["<leader>6"] = { ":BufferLineGoToBuffer 6<cr>", desc = "go to buffer 1" },
 
 
-        -- ["<leader>db"] = {
-        --   "<cmd>lua require'dap'.toggle_breakpoint(); require'user.dap.dap-util'.store_breakpoints(true)<cr>",
-        -- },
-        -- ["<leader>dt"] = {"<CMD>GoDebug -t<CR>"},
-        -- ["<M-F8>"] = { "<cmd>lua require'dap'.toggle_breakpoint()<CR>" }, -- command+f8
-        -- ["<F4>"] = { "<cmd>lua require'dap'.terminate()<CR>" },
-        -- ["<F9>"] = { "<cmd>lua require'dap'.continue()<CR>" },
-        -- ["<F7>"] = { "<cmd>lua require'dap'.step_into()<CR>" },
-        -- ["<F8>"] = { "<cmd>lua require'dap'.step_over()<CR>" },
-    },
-    i = {
-        -- ["<C-q>"] = { "<cmd>SessionManager load_session<CR>", desc = "Load session" }, -- <!>load_session
-        ["jk"] = { "<Esc>", desc = "back to normal_mode" },
-        ["<M-P>"] = { "<cmd>Telescope commands<CR>", desc = "Find commands" },
+    -- Nohl
+    -- ["<leader>nl"] = { "<cmd> nohl <CR>", desc = "nohl" },
 
-        [";;"] = { " := ", desc = "golang: assign value" },
-        -- [";a"] = { " != ", desc = "!=" },
-        -- [";s"] = { " += ", desc = "+=" },
-        -- [";d"] = { " == ", desc = "==" },
-    },
-    v = {
-        -- ["<leader>dd"] = { "<cmd> DiffviewFileHistory<cr>", desc = "Diff file history" },
-        -- ["<M-r>"] = { "<Plug>SnipRun" },
-        -- ["<M-k>"] = { "<CMD>Lspsaga code_action<CR>", desc = "Code Action" },
-    },
-    t = {
-        -- setting a mapping to false will disable it
-        -- ["<esc>"] = false,
-    },
+    -- Show
+    -- ["<leader>ss"] = { "<cmd>AerialToggle<CR>", desc = "Show outline" },
+
+    -- ["<C-q>"] = { "<cmd>SessionManager load_session<CR>", desc = "Load session" }, -- <!>load_session
+
+    -- Test KeyStroke
+    ["<C-M-m>"] = { '<cmd>lua vim.notify("heihei")<CR>' }, -- command+control+m
+    -- ["<M-m>"] = { '<cmd>lua vim.notify("<M> is CMD in Mac, achieve by wezterm")<CR>' }, -- command+m
+    -- ["<M-I>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" }, -- alt + shift + i --> tab + i --> by karabiner
+
+
+    -- ["<leader>db"] = {
+    --   "<cmd>lua require'dap'.toggle_breakpoint(); require'user.dap.dap-util'.store_breakpoints(true)<cr>",
+    -- },
+    -- ["<leader>dt"] = {"<CMD>GoDebug -t<CR>"},
+    -- ["<M-F8>"] = { "<cmd>lua require'dap'.toggle_breakpoint()<CR>" }, -- command+f8
+    -- ["<F4>"] = { "<cmd>lua require'dap'.terminate()<CR>" },
+    -- ["<F9>"] = { "<cmd>lua require'dap'.continue()<CR>" },
+    -- ["<F7>"] = { "<cmd>lua require'dap'.step_into()<CR>" },
+    -- ["<F8>"] = { "<cmd>lua require'dap'.step_over()<CR>" },
+  },
+  i = {
+    -- ["<C-q>"] = { "<cmd>SessionManager load_session<CR>", desc = "Load session" }, -- <!>load_session
+    ["jk"] = { "<Esc>", desc = "back to normal_mode" },
+    ["<M-P>"] = { "<cmd>Telescope commands<CR>", desc = "Find commands" },
+
+    [";;"] = { " := ", desc = "golang: assign value" },
+    -- [";a"] = { " != ", desc = "!=" },
+    -- [";s"] = { " += ", desc = "+=" },
+    -- [";d"] = { " == ", desc = "==" },
+    -- ["<C-i>"] = { 'copilot#Accept("<CR>")', desc = "copilot Accept" },
+  },
+  v = {
+    -- ["<leader>dd"] = { "<cmd> DiffviewFileHistory<cr>", desc = "Diff file history" },
+    ["<M-r>"] = { "<Plug>SnipRun" },
+    -- ["<M-k>"] = { "<CMD>Lspsaga code_action<CR>", desc = "Code Action" },
+  },
+  t = {
+    -- setting a mapping to false will disable it
+    -- ["<esc>"] = false,
+  },
 }
 
 local function explorer()
@@ -103,7 +110,7 @@ local function lspMappings()
   lvim.lsp.buffer_mappings.normal_mode["gI"] = { "<CMD>Telescope lsp_implementations<CR>" }
   lvim.lsp.buffer_mappings.normal_mode["ge"] = { "<CMD>Telescope diagnostics<CR>" }
   lvim.lsp.buffer_mappings.normal_mode["gE"] = {
-      "<cmd>lua vim.diagnostic.open_float(0, { scope = 'line', border = 'rounded' })<CR>" }
+    "<cmd>lua vim.diagnostic.open_float(0, { scope = 'line', border = 'rounded' })<CR>" }
 
   lvim.lsp.buffer_mappings.normal_mode['gh'] = lvim.lsp.buffer_mappings.normal_mode['K']
 end
