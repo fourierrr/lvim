@@ -7,6 +7,7 @@
 --   term_mode = "t", command_mode = "c",
 
 lvim.leader = "space"
+-- <M-...> is meta key, is opts in Mac,  need to config in iterm2, Preference -> Profiles -> Keys -> Left Option key -> ESC+.
 local mappings = {
   -- first key is the mode
   n = {
