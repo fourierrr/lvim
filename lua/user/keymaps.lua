@@ -82,7 +82,7 @@ local mappings = {
     -- ["<C-i>"] = { 'copilot#Accept("<CR>")', desc = "copilot Accept" },
   },
   v = {
-    -- ["<leader>dd"] = { "<cmd> DiffviewFileHistory<cr>", desc = "Diff file history" },
+    ["<leader>dd"] = { "<cmd> DiffviewFileHistory<cr>", desc = "Diff file history" },
     ["<M-r>"] = { "<Plug>SnipRun" },
     -- ["<M-k>"] = { "<CMD>Lspsaga code_action<CR>", desc = "Code Action" },
   },
@@ -91,6 +91,11 @@ local mappings = {
     -- ["<esc>"] = false,
   },
 }
+
+local function SnipRun()
+  lvim.keys.visual_mode["<leader>rr"] = { "<Plug>SnipRun" }
+  lvim.keys.normal_mode["<leader>rr"] = { "<Plug>SnipRunOperator" }
+end
 
 local function explorer()
   lvim.keys.normal_mode["ff"] = "<cmd>NvimTreeToggle<cr>"
@@ -126,6 +131,7 @@ function Setup()
   -- unmapLvimDefault()
   -- bufferLineKeybindings()
   explorer()
+  SnipRun()
   -- leap()
   -- tab()
   telescopeMappings()

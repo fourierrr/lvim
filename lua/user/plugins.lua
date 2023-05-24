@@ -15,6 +15,11 @@ local plugins = {
   --   "github/copilot.vim",
   -- },
   {
+    'michaelb/sniprun',
+    build = 'bash ./install.sh',
+    event = "BufRead",
+  },
+  {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     event = "InsertEnter",
