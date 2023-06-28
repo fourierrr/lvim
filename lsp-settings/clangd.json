@@ -1,0 +1,8 @@
+{
+  "clangd.arguments": [
+    "--compile-commands-dir=${workspaceFolder}/build",
+    "--completion-style=detailed",
+    "--header-insertion=never"
+  ],
+  "clangd.path": "/usr/bin/clangd"
+}
