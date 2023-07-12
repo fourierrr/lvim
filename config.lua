@@ -56,6 +56,8 @@ local function on_attach(bufnr)
   vim.keymap.set('n', 'Z', api.node.run.system, opts('Run System'))
 end
 lvim.builtin.nvimtree.setup.on_attach = on_attach
+lvim.builtin.nvimtree.setup.renderer.icons.show.folder_arrow=false
+lvim.builtin.nvimtree.setup.renderer.indent_markers.enable=true
 
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
