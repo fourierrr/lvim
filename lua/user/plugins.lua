@@ -15,6 +15,9 @@ local plugins = {
   --   "github/copilot.vim",
   -- },
   {
+    "ojroques/vim-oscyank"
+  },
+  {
     'michaelb/sniprun',
     build = 'bash ./install.sh',
     event = "BufRead",
@@ -31,7 +34,7 @@ local plugins = {
     "ethanholz/nvim-lastplace",
   },
   {
-    "xiyaowong/nvim-transparent",
+    "xiyaowong/transparent.nvim",
   },
   {
     "phaazon/hop.nvim",

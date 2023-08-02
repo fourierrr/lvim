@@ -30,3 +30,4 @@ lvim.format_on_save = { enabled = false }
 --     timeout = 1000,
 -- }
 
+vim.cmd([[ autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '' | execute 'OSCYankRegister "' | endif ]])
