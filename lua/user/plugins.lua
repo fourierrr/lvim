@@ -18,6 +18,12 @@ local plugins = {
     "ojroques/vim-oscyank"
   },
   {
+    "theHamsta/nvim-dap-virtual-text"
+  },
+  {
+    "nvim-telescope/telescope-dap.nvim"
+  },
+  {
     'michaelb/sniprun',
     build = 'bash ./install.sh',
     event = "BufRead",

@@ -9,6 +9,7 @@ require("user.options")
 require("user.keymaps")
 lvim.plugins = require("user.plugins")
 require("user.conf")
+require("user.dap")
 
 
 -- -- Change theme settings
@@ -20,6 +21,7 @@ lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.lualine.style = "default"
 lvim.builtin["terminal"].shell = "zsh"
+lvim.builtin.gitsigns.opts.current_line_blame_formatter = '     <author>, <author_time:%Y-%m-%d> - <summary>'
 lvim.builtin.gitsigns.opts.current_line_blame = true
 lvim.builtin.gitsigns.opts.current_line_blame_opts.delay = 300
 lvim.builtin.telescope.theme = "centor"
@@ -56,8 +58,8 @@ local function on_attach(bufnr)
   vim.keymap.set('n', 'Z', api.node.run.system, opts('Run System'))
 end
 lvim.builtin.nvimtree.setup.on_attach = on_attach
-lvim.builtin.nvimtree.setup.renderer.icons.show.folder_arrow=false
-lvim.builtin.nvimtree.setup.renderer.indent_markers.enable=true
+lvim.builtin.nvimtree.setup.renderer.icons.show.folder_arrow = false
+lvim.builtin.nvimtree.setup.renderer.indent_markers.enable = true
 
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
@@ -67,6 +69,30 @@ lvim.builtin.cmp.confirm_opts.select = true
 
 -- Automatically install missing parsers when entering buffer
 lvim.builtin.treesitter.auto_install = true
+
+
+lvim.builtin.dap.ui.config.layouts = {
+  {
+    elements = {
+      { id = "watches",      size = 0.25 },
+      { id = "breakpoints", size = 0.25 },
+      { id = "stacks",      size = 0.25 },
+      { id = "repl",     size = 0.25 },
+    },
+    size = 0.33,
+    position = "right",
+  },
+  {
+    elements = {
+      { id = "scopes",    size = 1 },
+      -- { id = "repl",    size = 0.45 },
+      -- { id = "console", size = 0.55 },
+    },
+    size = 0.25,
+    position = "bottom",
+  },
+
+}
 
 -- lvim.builtin.treesitter.ignore_install = { "haskell" }
 
@@ -80,9 +106,8 @@ lvim.builtin.treesitter.auto_install = true
 
 -- ---configure a server manually. IMPORTANT: Requires `:LvimCacheReset` to take effect
 -- ---see the full default list `:lua =lvim.lsp.automatic_configuration.skipped_servers`
--- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
--- local opts = {} -- check the lspconfig documentation for a list of all possible options
--- require("lvim.lsp.manager").setup("pyright", opts)
+-- Now you can set it up manually using the builtin lsp manager in $LUNARVIM_CONFIG_DIR/ftplugin/<filetype>.lua
+-- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "gopls" })
 
 -- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. IMPORTANT: Requires `:LvimCacheReset` to take effect
 -- ---`:LvimInfo` lists which server(s) are skipped for the current filetype

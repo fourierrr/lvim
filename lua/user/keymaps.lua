@@ -25,8 +25,8 @@ local mappings = {
     ["<leader>a"] = { ":Lspsaga code_action<cr>", desc = "Lspsaga code_action" },
     ["<leader>rn"] = { ":Lspsaga rename<cr>", desc = "Lspsaga rename" },
 
-    ["<c-d>"] = { "15j",desc = "faster j"},
-    ["<c-u>"] = { "15k",desc = "faster j"},
+    ["<c-d>"] = { "15j", desc = "faster j" },
+    ["<c-u>"] = { "15k", desc = "faster j" },
 
 
     ["fm"] = { "<cmd>lua vim.lsp.buf.format { async = true } <cr>", desc = "Format" },
@@ -48,6 +48,13 @@ local mappings = {
     ["<leader>5"] = { ":BufferLineGoToBuffer 5<cr>", desc = "go to buffer 1" },
     ["<leader>6"] = { ":BufferLineGoToBuffer 6<cr>", desc = "go to buffer 1" },
 
+    -- dap
+    ["<F9>"] = { "<cmd>lua require'dap'.run_last()<cr>" },
+    ["<F4>"] = { "<cmd>lua require'dap'.terminate()<cr>" },
+    ["<F5>"] = { "<cmd>lua require'dap'.continue()<cr>" },
+    ["<F6>"] = { "<cmd>lua require'dap'.step_over()<cr>" },
+    ["<F7>"] = { "<cmd>lua require'dap'.step_into()<cr>" },
+    ["<F8>"] = { "<cmd>lua require'dap'.step_out()<cr>" },
 
     -- Nohl
     -- ["<leader>nl"] = { "<cmd> nohl <CR>", desc = "nohl" },
@@ -128,6 +135,7 @@ local function whichkey()
   -- default <leader>f is choose find_files or git_files
   -- i do not want git_files, it's will always be find_files
   lvim.builtin.which_key.mappings["f"] = {}
+  lvim.builtin.which_key.mappings["b"] = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" }
 end
 
 function Setup()
