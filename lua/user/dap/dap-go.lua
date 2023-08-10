@@ -45,25 +45,6 @@ local get_args = function()
   return params
 end;
 
-dap.configurations.go = {
--- 普通文件的debug
-  {
-    type = "go",
-    name = "Debug",
-    request = "launch",
-    args = get_args,
-    program = "${file}",
-  },
--- 测试文件的debug
-  {
-    type = "go",
-    name = "Debug test", -- configuration for debugging test files
-    request = "launch",
-    args = get_args,
-    mode = "test",
-    program = "${file}",
-  },
-}
 
 -- https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv_dap.md
 dap.configurations.go = {
