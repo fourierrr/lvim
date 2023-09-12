@@ -1,3 +1,5 @@
 require "user.dap.dap-go"
+require "user.dap.dap-sh"
+require "user.dap.dap-c"
 require "user.dap.dap-telescope"
 require "user.dap.dap-virtual-text"

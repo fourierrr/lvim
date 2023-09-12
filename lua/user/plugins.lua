@@ -24,6 +24,9 @@ local plugins = {
     "nvim-telescope/telescope-dap.nvim"
   },
   {
+    "leoluz/nvim-dap-go"
+  },
+  {
     'michaelb/sniprun',
     build = 'bash ./install.sh',
     event = "BufRead",
