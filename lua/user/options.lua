@@ -8,11 +8,11 @@ vim.opt.spelllang = "en"
 
 -- set autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 vim.api.nvim_create_autocmd("BufEnter", {
-  desc = "Disable automatic comment insertion",
-  group = vim.api.nvim_create_augroup("AutoComment", {}),
-  callback = function()
-    vim.opt_local.formatoptions:remove({ "c", "r", "o" })
-  end,
+	desc = "Disable automatic comment insertion",
+	group = vim.api.nvim_create_augroup("AutoComment", {}),
+	callback = function()
+		vim.opt_local.formatoptions:remove({ "c", "r", "o" })
+	end,
 })
 -- vim.opt.foldcolumn = '0'
 -- vim.opt.foldenable = true
@@ -30,4 +30,6 @@ lvim.format_on_save = { enabled = false }
 --     timeout = 1000,
 -- }
 
-vim.cmd([[ autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '' | execute 'OSCYankRegister "' | endif ]])
+vim.cmd(
+	[[ autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '' | execute 'OSCYankRegister "' | endif ]]
+)
