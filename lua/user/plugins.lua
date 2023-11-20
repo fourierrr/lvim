@@ -80,6 +80,9 @@ local plugins = {
     "kkharji/lspsaga.nvim",
     dependencies = { { "nvim-tree/nvim-web-devicons" } }
   },
+  {
+    "mhartington/formatter.nvim",
+  },
 
 }
 

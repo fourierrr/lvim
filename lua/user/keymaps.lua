@@ -29,7 +29,8 @@ local mappings = {
     ["<c-u>"] = { "15k", desc = "faster j" },
 
 
-    ["fm"] = { "<cmd>lua vim.lsp.buf.format { async = true } <cr>", desc = "Format" },
+    -- ["fm"] = { "<cmd>lua vim.lsp.buf.format { async = true } <cr>", desc = "Format" },
+    ["fm"] = { ":Format<cr>", desc = "Format" },
     -- ["<M-m>"] = { "<cmd>lua vim.lsp.buf.format { async = true } <cr>", desc = "Format" },
 
     -- ["<leader>gr"] = { function() require("gitsigns").reset_hunk() end, desc = "Reset git hunk" },
