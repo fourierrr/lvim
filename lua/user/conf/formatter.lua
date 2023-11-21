@@ -45,6 +45,14 @@ formatters.setup({
 			end,
 		},
 
+		go = {
+			require("formatter.filetypes.go").goimports,
+		},
+
+		sh = {
+			require("formatter.filetypes.sh").shfmt,
+		},
+
 		-- Use the special "*" filetype for defining formatter configurations on
 		-- any filetype
 		["*"] = {
