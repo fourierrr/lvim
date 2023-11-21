@@ -53,6 +53,18 @@ formatters.setup({
 			require("formatter.filetypes.sh").shfmt,
 		},
 
+		yml = {
+			require("formatter.filetypes.yaml").yamlfmt,
+		},
+
+		yaml = {
+			require("formatter.filetypes.yaml").yamlfmt,
+		},
+
+		rs = {
+			require("formatter.filetypes.rust").rustfmt,
+		},
+
 		-- Use the special "*" filetype for defining formatter configurations on
 		-- any filetype
 		["*"] = {
