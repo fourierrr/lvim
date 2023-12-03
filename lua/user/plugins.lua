@@ -83,6 +83,10 @@ local plugins = {
 	{
 		"mhartington/formatter.nvim",
 	},
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
 }
 
 local colorschemes = {

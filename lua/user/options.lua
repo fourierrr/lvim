@@ -1,7 +1,7 @@
 -- vim options
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 vim.opt.showmode = true
 vim.opt.cmdheight = 1
 vim.opt.spelllang = "en"

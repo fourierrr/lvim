@@ -49,8 +49,20 @@ formatters.setup({
 			require("formatter.filetypes.go").goimports,
 		},
 
+		json = {
+			require("formatter.filetypes.json").jq,
+		},
+
 		sh = {
 			require("formatter.filetypes.sh").shfmt,
+		},
+
+		rust = {
+			require("formatter.filetypes.rust").rustfmt,
+		},
+
+		python = {
+			require("formatter.filetypes.python").black,
 		},
 
 		yml = {
@@ -59,10 +71,6 @@ formatters.setup({
 
 		yaml = {
 			require("formatter.filetypes.yaml").yamlfmt,
-		},
-
-		rs = {
-			require("formatter.filetypes.rust").rustfmt,
 		},
 
 		-- Use the special "*" filetype for defining formatter configurations on
