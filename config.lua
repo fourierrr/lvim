@@ -94,6 +94,13 @@ lvim.builtin.dap.ui.config.layouts = {
 	},
 }
 
+vim.filetype.add({
+	extension = {
+		bats = "bats",
+	},
+})
+vim.treesitter.language.register("bash", "bats")
+
 -- lvim.builtin.treesitter.ignore_install = { "haskell" }
 
 -- -- always installed on startup, useful for parsers without a strict filetype
