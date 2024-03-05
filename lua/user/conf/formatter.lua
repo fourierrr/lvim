@@ -57,6 +57,10 @@ formatters.setup({
 			require("formatter.filetypes.sh").shfmt,
 		},
 
+		bats = {
+			require("formatter.filetypes.sh").shfmt,
+		},
+
 		rust = {
 			require("formatter.filetypes.rust").rustfmt,
 		},
