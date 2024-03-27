@@ -11,9 +11,9 @@ local plugins = {
 	{
 		"Pocco81/auto-save.nvim",
 	},
-	-- {
-	--   "github/copilot.vim",
-	-- },
+	{
+		"github/copilot.vim",
+	},
 	{
 		"ojroques/vim-oscyank",
 	},
@@ -31,13 +31,34 @@ local plugins = {
 		build = "bash ./install.sh",
 		event = "BufRead",
 	},
+	-- {
+	-- 	"zbirenbaum/copilot.lua",
+	-- 	cmd = "Copilot",
+	-- 	event = "InsertEnter",
+	-- 	config = function()
+	-- 		require("copilot").setup({})
+	-- 	end,
+	-- },
 	{
-		"zbirenbaum/copilot.lua",
-		cmd = "Copilot",
-		event = "InsertEnter",
-		config = function()
-			require("copilot").setup({})
-		end,
+		"kawre/leetcode.nvim",
+		build = ":TSUpdate html",
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+			"nvim-lua/plenary.nvim", -- telescope 所需
+			"MunifTanjim/nui.nvim",
+
+			-- 可选
+			"nvim-treesitter/nvim-treesitter",
+			-- "rcarriga/nvim-notify",
+			"nvim-tree/nvim-web-devicons",
+		},
+		opts = {
+			-- 配置放在这里
+      lang = "golang",
+			cn = {
+				enabled = true,
+			},
+		},
 	},
 	{
 		"ethanholz/nvim-lastplace",

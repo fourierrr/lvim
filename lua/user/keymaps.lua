@@ -101,6 +101,18 @@ local mappings = {
 	},
 }
 
+local function Copilot()
+	-- vim.keymap.set("i", "<F20>", 'copilot#Accept("\\<CR>")', {
+	-- vim.keymap.set("i", "<F3>", 'copilot#Accept("")', {
+
+	-- 	expr = true,
+	-- 	replace_keycodes = false,
+	-- })
+  vim.api.nvim_set_keymap("i", "<F20>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+	vim.keymap.set("i", "<C-J>", "<Plug>(copilot-accept-word)")
+	vim.g.copilot_no_tab_map = true
+end
+
 local function SnipRun()
 	lvim.keys.visual_mode["<leader>rr"] = { "<Plug>SnipRun" }
 	lvim.keys.normal_mode["<leader>rr"] = { "<Plug>SnipRunOperator" }
@@ -148,6 +160,7 @@ function Setup()
 	telescopeMappings()
 	lspMappings()
 	whichkey()
+	Copilot()
 	-- lspsaga()
 	-- git()
 	-- window()

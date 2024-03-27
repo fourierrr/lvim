@@ -4,7 +4,7 @@ dap.adapters.go = function(callback, _)
 	local stdout = vim.loop.new_pipe(false)
 	local handle
 	local pid_or_err
-	local port = 38697
+	local port = 38691
 	local opts = {
 		stdio = { nil, stdout },
 		args = { "dap", "-l", "127.0.0.1:" .. port },
