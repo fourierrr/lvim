@@ -3,13 +3,13 @@ lspsaga.setup({ -- defaults ...
 	debug = false,
 	use_saga_diagnostic_sign = false,
 	-- diagnostic sign
-	error_sign = "",
-	warn_sign = "",
-	hint_sign = "",
+	error_sign = lvim.icons.diagnostics.Error,
+	warn_sign = lvim.icons.diagnostics.Warning,
+	hint_sign = lvim.icons.diagnostics.Hint,
 	infor_sign = "",
 	diagnostic_header_icon = "   ",
 	-- code action title icon
-	code_action_icon = " ",
+	code_action_icon = lvim.icons.ui.Lightbulb,
 	code_action_prompt = {
 		enable = true,
 		sign = false,
@@ -36,7 +36,7 @@ lspsaga.setup({ -- defaults ...
 		quit = "<C-c>",
 		exec = "<CR>",
 	},
-	definition_preview_icon = "  ",
+	definition_preview_icon = lvim.icons.kind.Event,
 	border_style = "single",
 	rename_prompt_prefix = "Rename ➤",
 	rename_output_qflist = {
