@@ -84,7 +84,7 @@ local mappings = {
 		["jk"] = { "<Esc>", desc = "back to normal_mode" },
 		["<M-P>"] = { "<cmd>Telescope commands<CR>", desc = "Find commands" },
 
-		[";;"] = { " := ", desc = "golang: assign value" },
+		-- [";;"] = { " := ", desc = "golang: assign value" },
 		-- [";a"] = { " != ", desc = "!=" },
 		-- [";s"] = { " += ", desc = "+=" },
 		-- [";d"] = { " == ", desc = "==" },
@@ -108,7 +108,7 @@ local function Copilot()
 	-- 	expr = true,
 	-- 	replace_keycodes = false,
 	-- })
-  vim.api.nvim_set_keymap("i", "<F20>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+  vim.api.nvim_set_keymap("i", "<C-I>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 	vim.keymap.set("i", "<C-J>", "<Plug>(copilot-accept-word)")
 	vim.g.copilot_no_tab_map = true
 end

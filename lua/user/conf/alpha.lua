@@ -53,7 +53,8 @@ end
 
 local pluginCount = {
 	type = "text",
-	val = string.format("Neovim %s  %d plugins in total.", print_version, plugins),
+	val = string.format("Neovim %s " .. lvim.icons.kind.Module .. " %d plugins in total.", print_version, plugins),
+	-- val = string.format("Neovim %s %d plugins in total.", print_version, plugins),
 	opts = {
 		position = "center",
 		hl = "String",
@@ -100,11 +101,19 @@ local buttons = {
 		{ type = "padding", val = 2 },
 		-- dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
 		-- button({ shortcut = 'f', hl = { { 'DevIconC', 2, 3 } } }, "  Find file", ":Telescope find_files <CR>"),
-		button({ shortcut = "f", hl = { { "Keyword", 2, 3 } } }, "  Find file", ":Telescope find_files <CR>"),
+		button(
+			{ shortcut = "f", hl = { { "Keyword", 2, 3 } } },
+			lvim.icons.ui.FindFile .. " Find file",
+			":Telescope find_files <CR>"
+		),
 		{ type = "padding", val = 2 },
 		-- dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
 		-- button({ shortcut = 'e', hl = { { 'DevIconD', 2, 3 } } }, "  New file", ":ene <BAR> startinsert <CR>"),
-		button({ shortcut = "e", hl = { { "Constant", 2, 3 } } }, "  New file", ":ene <BAR> startinsert <CR>"),
+		button(
+			{ shortcut = "e", hl = { { "Constant", 2, 3 } } },
+			lvim.icons.ui.NewFile .. " New file",
+			":ene <BAR> startinsert <CR>"
+		),
 		{ type = "padding", val = 2 },
 		-- dashboard.button("p", "  Find project", ":Telescope projects <CR>"),
 		-- button({ shortcut = 'p', hl = { { 'DevIconGo', 2, 3 } } }, "  Find project", ":Telescope projects <CR>"),
@@ -113,12 +122,16 @@ local buttons = {
 		-- button({ shortcut = 'o', hl = { { 'DevIconHtm', 2, 3 } } }, "  Recently used files", ":Telescope oldfiles <CR>"),
 		button(
 			{ shortcut = "o", hl = { { "WarningMsg", 2, 3 } } },
-			"  Recently used files",
+			lvim.icons.ui.History .. " Recently used files",
 			":Telescope oldfiles <CR>"
 		),
 		{ type = "padding", val = 2 },
 		-- button({ shortcut = 't', hl = { { 'DevIconDb', 2, 3 } } }, "  Find text", ":Telescope live_grep <CR>"),
-		button({ shortcut = "t", hl = { { "method", 2, 3 } } }, "  Find text", ":Telescope live_grep <CR>"),
+		button(
+			{ shortcut = "t", hl = { { "method", 2, 3 } } },
+			lvim.icons.ui.FindText .. " Find text",
+			":Telescope live_grep <CR>"
+		),
 		{ type = "padding", val = 2 },
 		button(
 			{ shortcut = "c", hl = { { "type", 2, 3 } } },
@@ -126,10 +139,18 @@ local buttons = {
 			":e ~/.config/lvim/config.lua <CR>"
 		),
 		{ type = "padding", val = 2 },
-		button({ shortcut = "l", hl = { { "character", 2, 3 } } }, "  Plugin Borad", ":Lazy <CR>"),
+		button(
+			{ shortcut = "l", hl = { { "character", 2, 3 } } },
+			lvim.icons.ui.Table .. " Plugin Borad",
+			":Lazy <CR>"
+		),
 		{ type = "padding", val = 2 },
 		-- dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
-		button({ shortcut = "q", hl = { { "Error", 2, 3 } } }, "  Quit Neovim", ":qa<CR>"),
+		button(
+			{ shortcut = "q", hl = { { "Error", 2, 3 } } },
+			lvim.icons.diagnostics.Error .. " Quit Neovim",
+			":qa<CR>"
+		),
 		{ type = "padding", val = 2 },
 		{ type = "padding", val = 2 },
 		{

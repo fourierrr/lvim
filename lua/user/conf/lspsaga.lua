@@ -9,7 +9,7 @@ lspsaga.setup({ -- defaults ...
 	infor_sign = "",
 	diagnostic_header_icon = "   ",
 	-- code action title icon
-	code_action_icon = " ",
+	code_action_icon = lvim.icons.ui.Lightbulb,
 	code_action_prompt = {
 		enable = true,
 		sign = false,
@@ -36,7 +36,8 @@ lspsaga.setup({ -- defaults ...
 		quit = "<C-c>",
 		exec = "<CR>",
 	},
-	definition_preview_icon = "  ",
+	-- definition_preview_icon = "  ",
+	definition_preview_icon = lvim.icons.kind.Event,
 	border_style = "single",
 	rename_prompt_prefix = "Rename ➤",
 	rename_output_qflist = {
