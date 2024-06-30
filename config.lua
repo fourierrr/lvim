@@ -56,8 +56,8 @@ local function on_attach(bufnr)
   vim.keymap.set('n', 'Z', api.node.run.system, opts('Run System'))
 end
 lvim.builtin.nvimtree.setup.on_attach = on_attach
-lvim.builtin.nvimtree.setup.renderer.icons.show.folder_arrow=false
-lvim.builtin.nvimtree.setup.renderer.indent_markers.enable=true
+lvim.builtin.nvimtree.setup.renderer.icons.show.folder_arrow = false
+lvim.builtin.nvimtree.setup.renderer.indent_markers.enable = true
 
 vim.g.copilot_no_tab_map = true
 vim.g.copilot_assume_mapped = true
@@ -128,3 +128,10 @@ lvim.builtin.treesitter.auto_install = true
 --     require("nvim-treesitter.highlight").attach(0, "bash")
 --   end,
 -- })
+
+vim.cmd [[ 
+  augroup _oscYank
+    autocmd!
+    autocmd TextYankPost * if v:event.operator is 'y' && v:event.regname is '+' | execute 'OSCYankRegister +' | endif
+  augroup end
+]]

@@ -5,6 +5,7 @@ vim.opt.relativenumber = true
 vim.opt.showmode = true
 vim.opt.cmdheight = 1
 vim.opt.spelllang = "en"
+vim.opt.clipboard = "unnamedplus"
 
 -- set autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 vim.api.nvim_create_autocmd("BufEnter", {
