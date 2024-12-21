@@ -108,7 +108,10 @@ local function Copilot()
 	-- 	expr = true,
 	-- 	replace_keycodes = false,
 	-- })
-  vim.api.nvim_set_keymap("i", "<C-I>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+
+  -- linux: M-i  is alt+i, this maybe conflict with vim-illuminate
+  -- so i change vim-illuminate source code to disable it's keymap
+  vim.api.nvim_set_keymap("i", "<M-i>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 	vim.keymap.set("i", "<C-J>", "<Plug>(copilot-accept-word)")
 	vim.g.copilot_no_tab_map = true
 end
